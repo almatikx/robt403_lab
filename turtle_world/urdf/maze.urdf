@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<robot name="maze">
+
+
+
+  <link name="maze_link">
+    <visual>
+      <geometry>
+        <mesh filename="package://turtle_world/meshes/maze.STL"/>
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://turtle_world/meshes/maze.STL"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="1.0"/>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <inertia ixx="0.1" ixy="0.0" ixz="0.0" iyy="0.1" iyz="0.0" izz="0.1"/>
+    </inertial>
+  </link>
+  
+  <gazebo reference="maze_link">
+ 	<material> Gazebo/Green </material>
+ 	<selfCollide>true</selfCollide>
+ </gazebo>
+  
+  
+</robot>
+

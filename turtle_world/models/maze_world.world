@@ -1,0 +1,49 @@
+<sdf version="1.4">
+  <world name="default">
+
+    <!-- Ground plane -->
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+
+    <!-- Light -->
+    <include>
+      <uri>model://sun</uri>
+    </include>
+
+    <!-- Maze model -->
+    <model name="maze">
+      <static>true</static> <!-- Makes the maze static (non-movable) -->
+      
+      <link name="maze_link">
+      
+        <visual name="maze_visual">
+          <geometry>
+	<mesh>
+          <uri>model://turtle_world/meshes/maze.STL</uri>
+          <scale>1 1 1</scale>
+        </mesh>
+          </geometry>
+        </visual>
+        
+         <material name="green">
+       <color rgba="0.0 0.8 0.0 1.0" />
+    </material>
+        
+        <collision name="maze_collision">
+        <origin xyz="0 0 0" rpy="0 0 0" />
+          <geometry>
+	<mesh>
+          <uri>model://turtle_world/meshes/maze.STL</uri>
+          <scale>1 1 1</scale>
+        </mesh>
+       
+          </geometry>
+        </collision>
+        
+      </link>
+    </model>
+
+  </world>
+</sdf>
+
